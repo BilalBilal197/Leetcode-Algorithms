@@ -1,5 +1,9 @@
-var reverse = function(x) {
-    let n = Math.abs(x).toString().split('').reverse().join('')
-    if (n > 2147483647) { return 0 }
-    return (x < 0? -1: 1) * n
+var reverseString = function(x) {
+    let num = Math.abs(x).toString().split('').reverse().join('')
+
+    if (x < 0)
+    return num * -1
+    else
+    return num  
+
   };
