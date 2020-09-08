@@ -6,5 +6,10 @@ var singleNum = function(nums) {
         total = total ^ num;
     }
     
+    console.log(total)
     return total;
 };
+
+// console.log(2)
+
+singleNum([3,4,5,6,4])
