@@ -24,4 +24,18 @@ var kthSmallest(root, k){
      return arr2[k - 1]
     
     
+    
+    }
+#########
+
+    // Kadane's Algorithm
+    function kadane(array) {
+        
+        let max = array[0]
+         let curSubtotal = array[0]
+         for (let i = 1; i < array.length; i++) {   
+             curSubtotal = Math.max(array[i], (curSubtotal + array[i]));
+            // console.log(curSubtotal)    
+            max = Math.max(curSubtotal, max)   }
+      return max
     }
