@@ -74,3 +74,28 @@ Return	- 1
 
 
 Time O n2   space O
+
+
+
+
+
+// sol two
+
+n = 7;
+Denoms = [1, 5, 10];
+
+Function minNumberOfCoins(n, denoms) {
+	Const dp = new Array(n + 1).fill(Infinity); // [0, Infinity, Infinity, Infinity, Infinity, Infinity, Infinity]
+	Dp[0] = 0;
+
+	For (const denom of denoms) { // 
+		For (let amount = 0; amount <= n; amount++) {
+	If (denom <= amount) {
+    Dp[amount] = Math.min(dp[amount], dp[amount - denom] + 1);
+    
+}
+}
+}
+
+Return dp[n] === Infinity ? -1 : dp[n];
+}
