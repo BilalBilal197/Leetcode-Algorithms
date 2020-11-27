@@ -22,3 +22,19 @@ var isSymmetric = function(root) {
     return true;
 };
 
+function isLevelSymmetric(nodes) {
+    var len = nodes.length;
+    var beg = 0;
+    var end = len - 1;
+    
+    while(beg < end) {
+        if(nodes[beg] === null && nodes[end] === null || (nodes[beg] && nodes[end] && nodes[beg].val === nodes[end].val)) {
+            beg++;
+            end--;
+        } else {
+            return false;
+        }
+    }
+    
+    return true;
+}
